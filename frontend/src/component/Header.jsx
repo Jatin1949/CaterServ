@@ -112,15 +112,15 @@ const Header = () => {
             <div>
               {!isLoggedIn ? (
                 <>
-                  <Link to="Register" className="btn btn-primary py-2 px-4 me-4 d-none d-xl-inline-block rounded-pill">SignUp</Link>
-                  <Link to="Login" className="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Login</Link>
+                  <Link to="Register" className="btn btn-primary py-2 px-4 me-4 rounded-pill">SignUp</Link>
+                  <Link to="Login" className="btn btn-primary py-2 px-4 rounded-pill text-dark">Login</Link>
                 </>
               ) : (
-                <button onClick={handleLogout} className="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill text-dark">Logout</button>
+                <button onClick={handleLogout} className="btn btn-primary py-2 px-4 rounded-pill text-dark">Logout</button>
               )}
 
               {/* Cart button with badge */}
-              <Link to="/Cart" className="btn btn-primary text-dark  position-relative ms-4 py-2 px-4 d-none d-xl-inline-block rounded-pill" style={{ borderRadius: 20 }}>
+              <Link to="/Cart" className="btn btn-primary text-dark  position-relative ms-4 py-2 px-4 rounded-pill" style={{ borderRadius: 20 }}>
                 Cart
                 <span
                   className="badge bg-dark text-white position-absolute"
