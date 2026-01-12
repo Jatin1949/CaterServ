@@ -114,6 +114,9 @@ const Header = () => {
                 <>
                   <Link to="Register" className="btn btn-primary py-2 px-4 me-4  rounded-pill">SignUp</Link>
                   <Link to="Login" className="btn btn-primary py-2 px-4  rounded-pill text-dark">Login</Link>
+                  <Link to="Register" className="btn btn-primary py-2 px-4 me-4 rounded-pill">SignUp</Link>
+                  <Link to="Login" className="btn btn-primary py-2 px-4 rounded-pill text-dark">Login</Link>
+
                 </>
               ) : (
                 <button onClick={handleLogout} className="btn btn-primary py-2 px-4 rounded-pill text-dark">Logout</button>
