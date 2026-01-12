@@ -56,7 +56,7 @@ const Register = () => {
 
       // NOTE: use the route your server exposes for sign up.
       // You used /user/login earlier — here we assume /user/register (adjust if your route is /user/signup)
-      const response = await axios.post("http://localhost:2076/user/register", payload);
+      const response = await axios.post("https://caterserv-ih8s.onrender.com/user/register", payload);
 
       console.log("Register response:", response?.data);
 

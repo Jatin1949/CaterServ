@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Moved inside try block in your code, but standard is top level. Both work.
     try {
-      const response = await axios.post("http://localhost:2076/user/login", data);
+      const response = await axios.post("https://caterserv-ih8s.onrender.com/user/login", data);
       
       // Check your specific backend response structure
       // Usually axios puts the body in response.data

@@ -13,9 +13,18 @@ dotenv.config();
 
 const app = express();
 
-app.use(express.json());
-app.use(cors());
-app.use(fileUpload());
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:5174",
+    "https://caterserv-ih8s.onrender.com",
+    "https://cater-serv-git-main-jatin-kumars-projects-52532dce.vercel.app/",
+    "https://cater-serv-sngb.vercel.app/",
+    // add frontend/admin deployed URLs later
+  ],
+  credentials: true
+}));
+
 
 // routes
 app.use("/uploads", express.static("uploads/products"));

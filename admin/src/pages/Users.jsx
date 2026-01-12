@@ -9,7 +9,7 @@ const Users = () => {
   const fetchUsers = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:2076/user/list"
+        "https://caterserv-ih8s.onrender.com/user/list"
       );
       setUsers(res.data);
     } catch {
@@ -34,7 +34,7 @@ const Users = () => {
     if (!confirm.isConfirmed) return;
 
     await axios.delete(
-      `http://localhost:2076/user/${id}`
+      `https://caterserv-ih8s.onrender.com/user/${id}`
     );
 
     Swal.fire("Deleted!", "User removed", "success");

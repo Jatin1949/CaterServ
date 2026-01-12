@@ -8,7 +8,7 @@ const Orders = () => {
   const fetchOrders = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:2076/api/orders"
+        "https://caterserv-ih8s.onrender.com/api/orders"
       );
       setOrders(res.data);
     } catch (err) {

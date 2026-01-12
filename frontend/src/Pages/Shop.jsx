@@ -4,7 +4,7 @@ import swal from "sweetalert2";
 import { addToCart } from "../utils/Cart";
 
 /* 🔥 IMPORTANT: backend image base URL */
-const IMAGE_BASE_URL = "http://localhost:2076/uploads";
+const IMAGE_BASE_URL = "https://caterserv-ih8s.onrender.com/uploads";
 
 /* =====================
    MENU GRID
@@ -128,7 +128,7 @@ const Shop = () => {
   useEffect(() => {
     const fetchProducts = () => {
       axios
-        .get("http://localhost:2076/api/products/list")
+        .get("https://caterserv-ih8s.onrender.com/api/products/list")
         .then((res) => setProducts(res.data))
         .catch(() => {});
     };

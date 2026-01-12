@@ -64,7 +64,7 @@ export default function PaymentPage() {
 
     try {
       await axios.post(
-        "http://localhost:2076/api/orders/create",
+        "https://caterserv-ih8s.onrender.com/api/orders/create",
         payload
       );
 

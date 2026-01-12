@@ -45,7 +45,7 @@ const AddProduct = () => {
       setLoading(true);
 
       await axios.post(
-        "http://localhost:2076/api/products/add",
+        "https://caterserv-ih8s.onrender.com/api/products/add",
         data
       );
 

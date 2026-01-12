@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { FiTrash2, FiEdit, FiSearch } from "react-icons/fi";
 
-const IMAGE_BASE_URL = "http://localhost:2076/uploads";
+const IMAGE_BASE_URL = "https://caterserv-ih8s.onrender.com/uploads";
 
 const ListProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -16,7 +16,7 @@ const ListProduct = () => {
   const fetchInfo = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:2076/api/products/list"
+        "https://caterserv-ih8s.onrender.com/api/products/list"
       );
       setAllProducts(res.data);
     } catch (error) {
@@ -36,7 +36,7 @@ const ListProduct = () => {
 
     try {
       await axios.delete(
-        `http://localhost:2076/api/products/${id}`
+        `https://caterserv-ih8s.onrender.com/api/products/${id}`
       );
       toast.success("Product Deleted");
       fetchInfo();
@@ -72,7 +72,7 @@ const ListProduct = () => {
       }
 
       await axios.put(
-        `http://localhost:2076/api/products/${editProduct._id}`,
+        `https://caterserv-ih8s.onrender.com/api/products/${editProduct._id}`,
         data
       );
 

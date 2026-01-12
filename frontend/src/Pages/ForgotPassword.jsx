@@ -10,7 +10,7 @@ const ForgotPassword = () => {
         if (!email.trim()) return toast.error("Enter your email");
 
         try {
-            const res = await axios.post("http://localhost:2076/user/forgot-password", { email });
+            const res = await axios.post("https://caterserv-ih8s.onrender.com/user/forgot-password", { email });
             console.log("forgot res:", res.data);
             if (res.data?.status === 200) {
                 toast.success(res.data.message || "Reset email sent, check your inbox");

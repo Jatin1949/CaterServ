@@ -24,12 +24,12 @@ const Dashboard = () => {
   const fetchStats = async () => {
     try {
       const productsRes = await axios.get(
-        "http://localhost:2076/api/products/list"
+        "https://caterserv-ih8s.onrender.com/api/products/list"
       );
       setTotalProducts(productsRes.data.length);
 
       const ordersRes = await axios.get(
-        "http://localhost:2076/api/orders"
+        "https://caterserv-ih8s.onrender.com/api/orders"
       );
       const orders = ordersRes.data;
       setTotalOrders(orders.length);
@@ -41,7 +41,7 @@ const Dashboard = () => {
       setRevenue(totalRevenue);
 
       const usersRes = await axios.get(
-        "http://localhost:2076/user/list"
+        "https://caterserv-ih8s.onrender.com/user/list"
       );
       setTotalUsers(usersRes.data.length);
 

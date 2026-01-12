@@ -29,7 +29,7 @@ const MyOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:2076/api/orders");
+      const res = await axios.get("https://caterserv-ih8s.onrender.com/api/orders");
 
       // TEMP: inject PENDING status
       const withStatus = res.data.map((o) => ({

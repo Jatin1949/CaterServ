@@ -23,7 +23,7 @@ const ResetPassword = () => {
     if (!token || !userId) return toast.error("Invalid reset link");
 
     try {
-      const res = await axios.post("http://localhost:2076/user/reset-password", {
+      const res = await axios.post("https://caterserv-ih8s.onrender.com/user/reset-password", {
         userId,
         token,
         password,
